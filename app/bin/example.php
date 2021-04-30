@@ -3,21 +3,7 @@
 // Usage:
 // docker-compose exec --workdir /opt/app php php bin/example.php
 
-use Bolt\Bolt;
-use Bolt\connection\StreamSocket;
-use Monolog\Handler\ErrorLogHandler;
-use Monolog\Logger;
-
-require_once dirname(__DIR__) . '/vendor/autoload.php';
-
-$logger = new Logger('neo4jPhpExample');
-$logger->pushHandler(new ErrorLogHandler());
-
-// Init Neo4j client
-
-$bolt = new Bolt(new StreamSocket('neo4j'));
-$bolt->setProtocolVersions(4.1);
-$bolt->init('MyClient/1.0', 'neo4j', 'secret');
+require_once __DIR__ . '/init.php';
 
 // Write some data
 

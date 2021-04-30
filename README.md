@@ -12,6 +12,15 @@ $ docker-compose up -d
 $ docker-compose exec --workdir /opt/app php composer install
 ```
 
+## Configuration
+
+Copy the configuration file and edit it:
+
+```
+$ cp app/bin/config.dist.php app/bin/config.php
+$ vi app/bin/config.php
+```
+
 ## Running the example command line script
 
 ```
