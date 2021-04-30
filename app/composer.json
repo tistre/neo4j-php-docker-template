@@ -1,0 +1,15 @@
+{
+    "name": "tistre/neo4j-php-example",
+    "description": "Example, minimal dockerized Neo4j + PHP client project\n\n",
+    "require": {
+        "php": "^7.4.0",
+        "stefanak-michal/bolt": "^2.1",
+        "guzzlehttp/guzzle": "^7.3",
+        "monolog/monolog": "^2.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}
